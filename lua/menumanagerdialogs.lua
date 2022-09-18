@@ -1,8 +1,7 @@
 local o_show_person_joining = MenuManager.show_person_joining
 function MenuManager:show_person_joining(id, nick)
 
-    -- Check if we're in stealth mode
-    if managers.groupai:state():whisper_mode() then
+    if NO_DROPIN_PAUSE.ShouldPause() then
         return o_show_person_joining(self, id, nick)
     end
 
@@ -15,8 +14,7 @@ end
 local o_close_person_joining = MenuManager.close_person_joining
 function MenuManager:close_person_joining(id)
     
-    -- Check if we're in stealth mode
-    if managers.groupai:state():whisper_mode() then
+    if NO_DROPIN_PAUSE.ShouldPause() then
         return o_close_person_joining(self, id)
     end
 
