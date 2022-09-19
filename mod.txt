@@ -8,11 +8,11 @@
     "hooks": [
         {
             "hook_id": "lib/network/base/basenetworksession",
-            "script_path": "lua/basenetworksession.lua"
+            "script_path": "mod.lua"
         },
         {
             "hook_id": "lib/managers/menumanagerdialogs",
-            "script_path": "lua/menumanagerdialogs.lua"
+            "script_path": "mod.lua"
         }
     ]
 }
