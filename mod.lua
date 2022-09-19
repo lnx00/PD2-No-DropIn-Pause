@@ -1,6 +1,6 @@
-if not NDIP then
+if not _G.NDIP then
 
-    NDIP = {
+    _G.NDIP = {
         ModPath = ModPath,
 
         Settings = {
@@ -9,19 +9,19 @@ if not NDIP then
         }
     }
 
-    function NDIP:ShouldPause()
+    function _G.NDIP:ShouldPause()
         if not self.Settings.Enabled then
             return false
         end
 
-        if self.Settings.StealthPause then
-            return true
+        if not self.Settings.StealthPause then
+            return false
         end
 
         return managers.groupai and managers.groupai:state():whisper_mode()
     end
 
-    function NDIP:RequireFile(hook, file)
+    function _G.NDIP:RequireFile(hook, file)
         if string.lower(RequiredScript) == string.lower(hook) then
             dofile(self.ModPath .. file)
         end
@@ -29,5 +29,5 @@ if not NDIP then
 
 end
 
-NDIP:RequireFile("lib/network/base/basenetworksession", "req/basenetworksession.lua")
-NDIP:RequireFile("lib/managers/menumanagerdialogs", "req/menumanagerdialogs.lua")
+_G.NDIP:RequireFile("lib/network/base/basenetworksession", "req/basenetworksession.lua")
+_G.NDIP:RequireFile("lib/managers/menumanagerdialogs", "req/menumanagerdialogs.lua")
