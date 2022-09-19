@@ -1,26 +1,25 @@
-if not NO_DROPIN_PAUSE then
-    
-    NO_DROPIN_PAUSE = {
+if not NDIP then
+
+    NDIP = {
         Settings = {
-            Enabled = true, -- Prevent drop-in pauses
+            Enabled = true, -- Prevent drop-in pause
             StealthPause = true -- Allows pause when stealth is active
         }
     }
 
-    function NO_DROPIN_PAUSE.ShouldPause()
-        if (not NO_DROPIN_PAUSE.Settings.Enabled) then
-            return true
-        end
-
-        if (not NO_DROPIN_PAUSE.Settings.StealthPause) then
+    function NDIP:ShouldPause()
+        if not self.Settings.Enabled then
             return false
         end
 
-        return (not managers.groupai) or managers.groupai:state():whisper_mode()
+        if self.Settings.StealthPause then
+            return true
+        end
 
+        return managers.groupai and managers.groupai:state():whisper_mode()
     end
 
-    dofile(ModPath .. "lua/basenetworksession.lua")
-    dofile(ModPath .. "lua/menumanagerdialogs.lua")
-
 end
+
+if string.lower(RequiredScript) == "lib/network/base/basenetworksession" then dofile("lua/basenetworksession.lua") end
+if string.lower(RequiredScript) == "lib/managers/menumanagerdialogs" then dofile("lua/menumanagerdialogs.lua") end
