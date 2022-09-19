@@ -2,7 +2,6 @@ if not _G.NDIP then
 
     _G.NDIP = {
         ModPath = ModPath,
-        SavePath = SavePath .. "ndip.json",
 
         Settings = {
             Enabled = true, -- Prevent drop-in pause
