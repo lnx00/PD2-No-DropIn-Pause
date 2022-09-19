@@ -2,9 +2,18 @@
     "name": "No Drop-In Pause",
     "description": "Removes the pause when another player is joining",
     "author": "lnx00",
-    "contact": "github.com/lnx00",
+    "color": "0.15 0.31 0.53",
+    "image": "mod.png",
     "version": "1.1",
     "blt_version": 2,
+    "updates": [
+        {
+            "identifier": "PD2-No-DropIn-Pause",
+            "host": {
+                "meta": "https://github.com/lnx00/PD2-No-DropIn-Pause/releases/latest/download/meta.json"
+            }
+        }
+    ],
     "dependencies": {
         "pd2-hoplib": {
             "meta": "https://updates.hoppip.at/pd2-hoplib"
