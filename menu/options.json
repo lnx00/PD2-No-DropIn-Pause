@@ -1,0 +1,7 @@
+{
+    "menu_id": "ndip_menu",
+    "parent_menu_id": "blt_options",
+    "title": "my_custom_menu",
+    "description": "my_custom_menu_desc",
+    "items": []
+}

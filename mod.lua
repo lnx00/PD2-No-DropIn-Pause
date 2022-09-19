@@ -2,6 +2,7 @@ if not _G.NDIP then
 
     _G.NDIP = {
         ModPath = ModPath,
+        SavePath = SavePath .. "ndip.json",
 
         Settings = {
             Enabled = true, -- Prevent drop-in pause
@@ -9,7 +10,7 @@ if not _G.NDIP then
         }
     }
 
-    function _G.NDIP:ShouldPause()
+    function NDIP:ShouldPause()
         if not self.Settings.Enabled then
             return false
         end
@@ -21,13 +22,22 @@ if not _G.NDIP then
         return managers.groupai and managers.groupai:state():whisper_mode()
     end
 
-    function _G.NDIP:RequireFile(hook, file)
+    function NDIP:RequireFile(hook, file)
         if string.lower(RequiredScript) == string.lower(hook) then
             dofile(self.ModPath .. file)
         end
     end
 
+    --[[ Menu Builder ]]
+    NDIP.MenuBuilder = MenuBuilder:new("ndip", NDIP.Settings)
+
+    Hooks:Add("MenuManagerBuildCustomMenus", "MenuManagerBuildCustomMenusUsefulBots", function(menu_manager, nodes)
+        local loc = managers.localization
+        HopLib:load_localization(NDIP.ModPath .. "loc/", loc)
+        NDIP.MenuBuilder:create_menu(nodes)
+    end)
+
 end
 
-_G.NDIP:RequireFile("lib/network/base/basenetworksession", "req/basenetworksession.lua")
-_G.NDIP:RequireFile("lib/managers/menumanagerdialogs", "req/menumanagerdialogs.lua")
+NDIP:RequireFile("lib/network/base/basenetworksession", "req/basenetworksession.lua")
+NDIP:RequireFile("lib/managers/menumanagerdialogs", "req/menumanagerdialogs.lua")

@@ -5,6 +5,11 @@
     "contact": "github.com/lnx00",
     "version": "1.0",
     "blt_version": 2,
+    "dependencies": {
+        "pd2-hoplib": {
+            "meta": "https://updates.hoppip.at/pd2-hoplib"
+        }
+    },
     "hooks": [
         {
             "hook_id": "lib/network/base/basenetworksession",

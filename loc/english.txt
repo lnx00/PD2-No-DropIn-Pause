@@ -1,0 +1,7 @@
+{
+    "menu_ndip": "No Drop-In Pause",
+    "menu_ndip_desc": "Removes the pause when another player is joining",
+    "menu_ndip_Enabled": "Prevent pause",
+    "menu_ndip_StealthPause": "Pause in stealth",
+    "menu_ndip_StealthPause_desc": "Pauses in stealth mode to prevent desync"
+}
