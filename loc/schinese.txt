@@ -1,0 +1,7 @@
+{
+    "menu_ndip": "No Drop-In Pause",
+    "menu_ndip_desc": "去除其他玩家加入时的暂停加载界面",
+    "menu_ndip_Enabled": "解除暂停",
+    "menu_ndip_StealthPause": "潜入保留暂停",
+    "menu_ndip_StealthPause_desc": "在潜入时保留暂停加载过程以防止不同步导致的各种问题"
+}

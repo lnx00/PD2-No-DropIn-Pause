@@ -16,7 +16,7 @@ if not _G.NDIP then
         end
 
         if self.Settings.HostOnly and not Network:is_server() then
-            return false
+            return true
         end
 
         if not self.Settings.StealthPause then
