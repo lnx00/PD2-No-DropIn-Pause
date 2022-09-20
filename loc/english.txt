@@ -1,7 +1,10 @@
 {
     "menu_ndip": "No Drop-In Pause",
     "menu_ndip_desc": "Removes the pause when another player is joining",
-    "menu_ndip_Enabled": "Prevent pause",
+    "menu_ndip_Enabled": "Enabled",
+    "menu_ndip_Enabled_desc": "Prevents the game from pausing when a player joins",
     "menu_ndip_StealthPause": "Pause in stealth",
-    "menu_ndip_StealthPause_desc": "Allows pauses in stealth mode to prevent desync"
+    "menu_ndip_StealthPause_desc": "Allows pauses in stealth mode to prevent desync",
+    "menu_ndip_HostOnly": "Only as host",
+    "menu_ndip_HostOnly_desc": "Only prevent pauses when you are the host"
 }

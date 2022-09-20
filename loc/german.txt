@@ -1,7 +1,10 @@
 {
     "menu_ndip": "No Drop-In Pause",
     "menu_ndip_desc": "Hält das Spiel nicht an, wenn ein Spieler beitritt",
-    "menu_ndip_Enabled": "Pause verhindern",
+    "menu_ndip_Enabled": "Aktiviert",
+    "menu_ndip_Enabled_desc": "Verhindert das pausieren des Spiels, wenn ein Spieler beitritt",
     "menu_ndip_StealthPause": "Während Stealth pausieren",
-    "menu_ndip_StealthPause_desc": "Pausiert das Spiel beim Schleichen um Desync zu verhindern"
+    "menu_ndip_StealthPause_desc": "Pausiert das Spiel beim Schleichen um Desync zu verhindern",
+    "menu_ndip_HostOnly": "Nur als Host",
+    "menu_ndip_HostOnly_desc": "Verhindert das pausieren nur als Host"
 }

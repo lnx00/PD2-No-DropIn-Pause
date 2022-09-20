@@ -5,12 +5,17 @@ if not _G.NDIP then
 
         Settings = {
             Enabled = true, -- Prevent drop-in pause
-            StealthPause = true -- Allows pause when stealth is active
+            StealthPause = true, -- Allows pause when stealth is active
+            HostOnly = false -- Only prevent pause when hosting
         }
     }
 
     function NDIP:ShouldPause()
         if not self.Settings.Enabled then
+            return false
+        end
+
+        if self.Settings.HostOnly and not Network:is_server() then
             return false
         end
 
