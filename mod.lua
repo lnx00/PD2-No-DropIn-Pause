@@ -12,7 +12,7 @@ if not _G.NDIP then
 
     function NDIP:ShouldPause()
         if not self.Settings.Enabled then
-            return false
+            return true
         end
 
         if self.Settings.HostOnly and not Network:is_server() then
