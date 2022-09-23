@@ -35,7 +35,7 @@ if not _G.NDIP then
     --[[ Menu Builder ]]
     NDIP.MenuBuilder = MenuBuilder:new("ndip", NDIP.Settings)
 
-    Hooks:Add("MenuManagerBuildCustomMenus", "MenuManagerBuildCustomMenusUsefulBots", function(menu_manager, nodes)
+    Hooks:Add("MenuManagerBuildCustomMenus", "MenuManagerBuildCustomMenusNDIP", function(menu_manager, nodes)
         local loc = managers.localization
         HopLib:load_localization(NDIP.ModPath .. "loc/", loc)
         NDIP.MenuBuilder:create_menu(nodes)
